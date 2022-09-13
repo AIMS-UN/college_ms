@@ -1,0 +1,20 @@
+version: '3.1'
+
+services:
+  db:
+    image: 'openkbs/mysql-workbench:latest'
+    container_name: aims_college_db
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=Juandi.123
+      - MYSQL_DBNAME=aims_college_db
+  college_ms:
+    image: 'college_ms:latest'
+    build: ./
+    container_name:  college_ms
+    depends_on:
+      - db
+    ports:
+      - "8081:8080"
