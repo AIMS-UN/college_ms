@@ -13,7 +13,7 @@ services:
       - MYSQL_PASSWORD=aims_college_password
     networks:
       - aims_college_network
-  aims_subject_ms:
+  aims_college_ms:
     build: .
     image: aims_college_ms
     container_name: aims_college_ms
