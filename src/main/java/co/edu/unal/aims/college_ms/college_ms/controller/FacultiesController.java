@@ -1,7 +1,7 @@
 package co.edu.unal.aims.college_ms.college_ms.controller;
 
-import co.edu.unal.aims.college_ms.college_ms.model.college.Departments;
-import co.edu.unal.aims.college_ms.college_ms.model.college.Faculties;
+import co.edu.unal.aims.college_ms.college_ms.model.Departments;
+import co.edu.unal.aims.college_ms.college_ms.model.Faculties;
 import co.edu.unal.aims.college_ms.college_ms.service.CollegeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

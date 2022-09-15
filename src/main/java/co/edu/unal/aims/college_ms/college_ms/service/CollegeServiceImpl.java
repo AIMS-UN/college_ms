@@ -1,8 +1,8 @@
 package co.edu.unal.aims.college_ms.college_ms.service;
 
-import co.edu.unal.aims.college_ms.college_ms.model.college.Careers;
-import co.edu.unal.aims.college_ms.college_ms.model.college.Departments;
-import co.edu.unal.aims.college_ms.college_ms.model.college.Faculties;
+import co.edu.unal.aims.college_ms.college_ms.model.Careers;
+import co.edu.unal.aims.college_ms.college_ms.model.Departments;
+import co.edu.unal.aims.college_ms.college_ms.model.Faculties;
 import co.edu.unal.aims.college_ms.college_ms.repository.CareerRepository;
 import co.edu.unal.aims.college_ms.college_ms.repository.DepartmentsRepository;
 import co.edu.unal.aims.college_ms.college_ms.repository.FacultiesRepository;

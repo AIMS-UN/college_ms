@@ -1,4 +1,4 @@
-package co.edu.unal.aims.college_ms.college_ms.model.college;
+package co.edu.unal.aims.college_ms.college_ms.model;
 
 
 import lombok.*;
