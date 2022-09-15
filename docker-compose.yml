@@ -1,20 +1,29 @@
-version: '3.1'
+version: "3.1"
 
 services:
-  db:
-    image: 'openkbs/mysql-workbench:latest'
+  aims_college_db:
+    image: mysql:5.7
     container_name: aims_college_db
     ports:
       - "3306:3306"
     environment:
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=Juandi.123
-      - MYSQL_DBNAME=aims_college_db
-  college_ms:
-    image: 'college_ms:latest'
-    build: ./
-    container_name:  college_ms
+      - MYSQL_ROOT_PASSWORD=rootPassword
+      - MYSQL_DATABASE=aims_college_db
+      - MYSQL_USER=aims_college_user
+      - MYSQL_PASSWORD=aims_college_password
+    networks:
+      - aims_college_network
+  aims_subject_ms:
+    build: .
+    image: aims_college_ms
+    container_name: aims_college_ms
     depends_on:
-      - db
+      - aims_college_db
     ports:
-      - "8081:8080"
+      - "8082:8080"
+    networks:
+      - aims_college_network
+
+networks:
+  aims_college_network:
+    driver: bridge
