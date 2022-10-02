@@ -16,8 +16,6 @@ services:
       - "3306:3306"
     volumes:
       - college:/var/lib/mysql
-    networks:
-      - college
 
   college_ms:
     build: .
@@ -25,18 +23,14 @@ services:
     container_name: college_ms
     depends_on:
       - college_db
+    links:
+      - college_db
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://college_db:3306/college
       - SPRING_DATASOURCE_USERNAME=aims
       - SPRING_DATASOURCE_PASSWORD=aims
     ports:
       - "8082:8080"
-    networks:
-      - college
 
 volumes:
   college:
-
-networks:
-  college:
-    driver: bridge
