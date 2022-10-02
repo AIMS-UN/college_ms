@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping(value="/college/department")
+@RequestMapping(value="/college/departments")
 public class DepartmentsController {
     private final CollegeService collegeService;
     @Autowired

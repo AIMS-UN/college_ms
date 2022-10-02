@@ -1,29 +1,45 @@
-version: "3.1"
+version: "3.8"
+name: aims
 
 services:
-  aims_college_db:
-    image: mysql:5.7
-    container_name: aims_college_db
+  college_db:
+    image: mysql
+    container_name: college_db
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: college
+      MYSQL_USER: aims
+      MYSQL_PASSWORD: aims
     ports:
       - "3306:3306"
-    environment:
-      - MYSQL_ROOT_PASSWORD=rootPassword
-      - MYSQL_DATABASE=aims_college_db
-      - MYSQL_USER=aims_college_user
-      - MYSQL_PASSWORD=aims_college_password
+    volumes:
+      - college:/var/lib/mysql
     networks:
-      - aims_college_network
-  aims_college_ms:
+      - college
+    
+    
+
+
+  college_ms:
     build: .
     image: aims_college_ms
-    container_name: aims_college_ms
+    container_name: college_ms
     depends_on:
-      - aims_college_db
+      - college_db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://college_db:3306/college
+      - SPRING_DATASOURCE_USERNAME=aims
+      - SPRING_DATASOURCE_PASSWORD=aims
     ports:
       - "8082:8080"
     networks:
-      - aims_college_network
+      - college
+
+volumes:
+  college:
 
 networks:
-  aims_college_network:
+  college:
     driver: bridge
