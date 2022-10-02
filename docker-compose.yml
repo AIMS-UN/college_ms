@@ -3,24 +3,21 @@ name: aims
 
 services:
   college_db:
-    image: mysql
+    image: mysql:latest
     container_name: college_db
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: college
-      MYSQL_USER: aims
-      MYSQL_PASSWORD: aims
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=college
+      - MYSQL_USER=aims
+      - MYSQL_PASSWORD=aims
     ports:
       - "3306:3306"
     volumes:
       - college:/var/lib/mysql
     networks:
       - college
-    
-    
-
 
   college_ms:
     build: .
