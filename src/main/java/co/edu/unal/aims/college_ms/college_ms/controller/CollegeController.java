@@ -32,9 +32,9 @@ public class CollegeController {
         }
 
     }
-    @GetMapping("/{career_id}")
-    public ResponseEntity<Careers> getEnrollment(@PathVariable("career_id") Integer career_id){
-        Careers careers = collegeService.BuscarPorIdC(career_id);
+    @GetMapping("/{careerId}")
+    public ResponseEntity<Careers> getEnrollment(@PathVariable("careerId") Integer careerId){
+        Careers careers = collegeService.BuscarPorIdC(careerId);
         if (careers == null){
             return ResponseEntity.notFound().build();
         }

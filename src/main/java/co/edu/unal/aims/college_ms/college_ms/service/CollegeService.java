@@ -8,11 +8,11 @@ import java.util.List;
 
 
 public interface CollegeService {
-    Careers BuscarPorIdC(Integer career_id);
+    Careers BuscarPorIdC(Integer careerId);
     List<Careers> BuscarPorNombreC(String name);
     List<Departments> BuscarPorNombreD(String name);
 
-    Departments BuscarPorIdD(Integer department_id);
-    Faculties BuscarPorIdF(Integer faculty_id);
+    Departments BuscarPorIdD(Integer departmentId);
+    Faculties BuscarPorIdF(Integer facultyId);
     List<Faculties> BuscarPorNombreF(String name);
 }

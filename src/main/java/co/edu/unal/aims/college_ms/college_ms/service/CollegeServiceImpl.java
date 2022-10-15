@@ -27,8 +27,8 @@ public class CollegeServiceImpl implements  CollegeService{
 
 
     @Override
-    public Careers BuscarPorIdC(Integer career_id) {
-        Careers careers=careerRepository.findById(career_id).orElse(null);
+    public Careers BuscarPorIdC(Integer careerId) {
+        Careers careers=careerRepository.findById(careerId).orElse(null);
         return careers;
     }
 
@@ -45,8 +45,8 @@ public class CollegeServiceImpl implements  CollegeService{
     }
 
     @Override
-    public Departments BuscarPorIdD(Integer department_id){
-        Departments departments= departmentsRepository.findById(department_id).orElse(null);
+    public Departments BuscarPorIdD(Integer departmentId){
+        Departments departments= departmentsRepository.findById(departmentId).orElse(null);
         return departments;
     }
 
@@ -54,8 +54,8 @@ public class CollegeServiceImpl implements  CollegeService{
 
 
     @Override
-    public Faculties BuscarPorIdF(Integer faculty_id) {
-        Faculties faculties= facultiesRepository.findById(faculty_id).orElse(null);
+    public Faculties BuscarPorIdF(Integer facultyId) {
+        Faculties faculties= facultiesRepository.findById(facultyId).orElse(null);
         return faculties ;
     }
 

@@ -31,12 +31,12 @@ public class FacultiesController {
             return ResponseEntity.ok(faculties);
         }
     }
-    @GetMapping("/{faculty_id}")
-    public ResponseEntity<Departments> getEnrollment(@PathVariable("faculty_id") Integer faculty_id){
-        Departments departments = collegeService.BuscarPorIdD(faculty_id);
-        if (departments == null){
+    @GetMapping("/{facultyId}")
+    public ResponseEntity<Faculties> getEnrollment(@PathVariable("facultyId") Integer facultyId){
+        Faculties faculties = collegeService.BuscarPorIdF(facultyId);
+        if (faculties == null){
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(departments);
+        return ResponseEntity.ok(faculties);
     }
 }

@@ -13,7 +13,7 @@ import javax.persistence.*;
 public class Faculties {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer faculty_id;
+    private Integer facultyId;
     private String name;
 
 }

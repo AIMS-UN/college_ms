@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Departments {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer department_id;
+    private Integer departmentId;
     private String name;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn()

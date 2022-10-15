@@ -31,9 +31,9 @@ public class DepartmentsController {
             return ResponseEntity.ok(departments);
         }
     }
-    @GetMapping("/{department_id}")
-    public ResponseEntity<Departments> getEnrollment(@PathVariable("department_id") Integer department_id){
-        Departments departments = collegeService.BuscarPorIdD(department_id);
+    @GetMapping("/{departmentId}")
+    public ResponseEntity<Departments> getEnrollment(@PathVariable("departmentId") Integer departmentId){
+        Departments departments = collegeService.BuscarPorIdD(departmentId);
         if (departments == null){
             return ResponseEntity.notFound().build();
         }
