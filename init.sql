@@ -9,7 +9,7 @@ VALUES ('Ingeniería de Sistemas e Industrial', 1),
     ('Medicina', 4),
     ('Biologia', 4),
     ('Ingeniería agricola', 1);
-INSERT INTO careers (credits, name, department_id)
+INSERT INTO careers (credits, career_name, department_id)
 VALUES (200, 'Ingeniería de Sistemas', 1),
     (200, 'Medicina', 2),
     (200, 'Biologia', 3),

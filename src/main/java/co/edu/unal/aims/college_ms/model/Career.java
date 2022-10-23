@@ -19,7 +19,7 @@ public class Career {
     private Integer careerId;
 
     @Column(nullable = false)
-    private String name;
+    private String careerName;
 
     private Integer credits;
 
