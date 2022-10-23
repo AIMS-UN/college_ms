@@ -1,0 +1,20 @@
+@baseUrl=http://localhost:8082
+
+
+### Get all Careers
+GET {{baseUrl}}/careers HTTP/1.1
+
+### Get a Career by ID
+GET {{baseUrl}}/careers/1 HTTP/1.1
+
+### Get all departments
+GET {{baseUrl}}/departments HTTP/1.1
+
+### Get a department by ID
+GET {{baseUrl}}/departments/1 HTTP/1.1
+
+### Get all faculties
+GET {{baseUrl}}/faculties HTTP/1.1
+
+### Get a faculty by ID
+GET {{baseUrl}}/faculties/1 HTTP/1.1

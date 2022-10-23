@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>co.edu.unal.aims.college_ms</groupId>
+    <groupId>co.edu.unal.aims</groupId>
     <artifactId>college_ms</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>aims.college.ms</name>
